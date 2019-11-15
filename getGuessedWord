@@ -1,0 +1,6 @@
+def getGuessedWord(sw,lg):
+    
+    for i in range(len(lg)):
+        lg[i] = "_"
+    print(' '.join(lg))
+    print()
