@@ -1,0 +1,9 @@
+def getAvailableLetters(lg):
+    import string
+    s = string.ascii_lowercase
+    ll = ''
+    for letter in s:
+        if letter not in lg:
+            ll = ll + letter
+    print("The letters left are: ")
+    return ll    
