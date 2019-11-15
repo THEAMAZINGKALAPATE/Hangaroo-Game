@@ -1,0 +1,27 @@
+def Hangaroo(sw):
+    import random
+    random.shuffle(sw)
+    A = list(sw[0])
+    K = []
+    K.extend(A)
+    
+    for i in range(len(K)):
+        K[i] = "_"
+        
+    print(' '.join(K))
+    print()
+    counter = 0
+        
+    while counter < len(A):
+        letter = input("Input a letter: ")
+        letter = letter.lower()
+        print(counter)
+            
+        for i in range(len(A)):
+            if A[i] == letter:
+                K[i] = letter
+                counter = counter + 1
+                print(' '.join(K))
+                print()
+    
+    print("You have guessed correctly")
