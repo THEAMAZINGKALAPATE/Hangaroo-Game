@@ -1,6 +1,3 @@
-def isWordGuessed(x):
-    print("Your word is ",x)
-    sw = list(x[0])
-    l = []
-    l.extend(sw) #More efficient that typing all letters
-    print("The letters are ", l)
+def isWordGuessed(sw, lg):
+    print("Your word is ",sw)
+    print("The letters are ",lg)
