@@ -1,27 +1,23 @@
-def Hangaroo(sw):
-    import random
-    random.shuffle(sw)
-    A = list(sw[0])
-    K = []
-    K.extend(A)
-    
-    for i in range(len(K)):
-        K[i] = "_"
-        
-    print(' '.join(K))
+def Hangaroo():
+    sw = input("Secret Word :")
+    lg = []
+    lg.extend(sw)
+    print("Your word is ",sw)
+    print("The letters are ",lg)
+    for i in range(len(lg)):
+        lg[i] = "_"
+    print(' '.join(lg))
     print()
     counter = 0
         
-    while counter < len(A):
+    while counter < len(lg):
+        import string
         letter = input("Input a letter: ")
         letter = letter.lower()
-        print(counter)
-            
-        for i in range(len(A)):
-            if A[i] == letter:
-                K[i] = letter
+        for i in range(len(sw)):
+            if sw[i] == letter:
+                lg[i] = letter
                 counter = counter + 1
-                print(' '.join(K))
+                print(' '.join(lg))
                 print()
-    
-    print("You have guessed correctly")
+    print("You guessed the Word!")
